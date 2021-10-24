@@ -1,6 +1,7 @@
 package merge
 
-func MergeSort(data []int) []int {
+//reuturn O(n logn)
+func MergeSort(data []int) []int { //O(logn)
 	if len(data) < 2 {
 		return data
 	}
@@ -8,7 +9,7 @@ func MergeSort(data []int) []int {
 	var middleIndex = len(data) / 2
 	var lefArr = data[:int(middleIndex)]
 	var righArr = data[int(middleIndex):]
-	return merge(MergeSort(lefArr), MergeSort(righArr))
+	return merge(MergeSort(lefArr), MergeSort(righArr)) //O(N)
 }
 
 func merge(leftArr, rightArr []int) []int {

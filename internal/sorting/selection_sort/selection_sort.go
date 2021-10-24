@@ -1,5 +1,6 @@
 package selection
 
+//reutrn O(n^2) Osquare
 func SelctionSort(data []int) []int {
 	if len(data) == 0 {
 		return data
